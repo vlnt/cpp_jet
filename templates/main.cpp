@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Swapper.h"
 
 using namespace std;
 
@@ -8,6 +9,9 @@ T getBigger(T a, T b);
 
 int main()
 {
+    Swapper<int> intSwapper(5, 10);
+    Swapper<string> stringSwapper("John", "Bob");
+    
     string name1 = "John";
     string name2 = "Alice";
 
@@ -19,6 +23,22 @@ int main()
     cout << "\t" << biggerInt << endl;
     cout << "\t" << biggerDouble << endl;
     cout << "\t" << biggerString << endl;
+    cout << endl << endl;
+
+    cout << "Testing swapper:" << endl;
+    cout << intSwapper.getFirst() << " " << intSwapper.getSecond() << endl;
+    cout << stringSwapper.getFirst() << " " << stringSwapper.getSecond() << endl;
+    cout << endl << endl;
+
+    intSwapper.swap();
+    stringSwapper.swap();
+
+    cout << "After the swap...:" << endl;
+    cout << intSwapper.getFirst() << " " << intSwapper.getSecond() << endl;
+    cout << stringSwapper.getFirst() << " " << stringSwapper.getSecond() << endl;
+    cout << endl << endl;
+
+
 
     return 0;
 }
