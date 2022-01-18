@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-void storeReverse(string origString, stack<char>& reverseStack);
+void storeReverse(string origString, stack<char>/*&reverseStack*/& reverseStack);//mistake is here. Should be a reference
 bool isPalindrome(string origString);
 void printResult(string origString);
 
@@ -14,7 +14,7 @@ int main()
 
 	strArray[0] = "racecar";
 	strArray[1] = "fudge";
-	strArray[2] = "civic";
+	strArray[2] = "civic"; 
 	strArray[3] = "bob";
 	strArray[4] = "dogs";
 
