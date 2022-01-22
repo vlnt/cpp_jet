@@ -10,7 +10,7 @@ T getBigger(T a, T b);
 int main()
 {
     Swapper<int> intSwapper(5, 10);
-    Swapper<string> stringSwapper("John", "Bob");
+    Swapper<string> stringSwapper("John", "Alice");
     
     string name1 = "John";
     string name2 = "Alice";
